@@ -65,7 +65,7 @@ plt.xlabel("Actual CGPA")
 plt.ylabel("Predicted CGPA")
 plt.title("Actual vs Predicted CGPA")
 plt.show()
-
+plt.savefig("images/Figure_1.png")
 
 print("\n--- Student Advisory System ---")
 # new student different from dataset whose data is given below
