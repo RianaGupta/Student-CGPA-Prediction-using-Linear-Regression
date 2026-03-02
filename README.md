@@ -1,5 +1,5 @@
 # Student-CGPA-Prediction-with-Recommendations-using-Linear-Regression
-A Machine Learning project that predicts student CGPA using Linear Regression based on study hours, attendance, and extracurricular participation.
+A Machine Learning project that predicts student CGPA using Linear Regression based on study hours, attendance, and extracurricular participation and based on the predicted CGPA this model also recommends the student on how to increase CGPA to them who needs improvement and also motivates the student who are already doing good.
 
 # Dataset
 Data is created manually in code itself.
