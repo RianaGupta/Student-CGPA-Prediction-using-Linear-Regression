@@ -17,6 +17,7 @@ data = {
     "ExtracurricularScore": np.random.uniform(0, 10, n)
 }
 
+# ----Converting data into dataframe---
 df=pd.DataFrame(data)
 
 # CGPA formula
@@ -40,6 +41,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=45
 )
 
+#----TRAIN MODEL---
 model = LinearRegression()
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
@@ -59,6 +61,8 @@ coef_df = pd.DataFrame({
 print("\nFeature Importance:")
 print(coef_df.sort_values(by="Coefficient", ascending=False))
 
+
+# ----graph showing actual vs predicted cgpa---
 plt.scatter(y_test, y_pred)
 plt.plot([0, 10], [0, 10])
 plt.xlabel("Actual CGPA")
@@ -67,6 +71,7 @@ plt.title("Actual vs Predicted CGPA")
 plt.show()
 
 
+# ---student advisory logic----
 print("\n--- Student Advisory System ---")
 # new student different from dataset whose data is given below
 new_student = pd.DataFrame({
@@ -79,8 +84,8 @@ new_student = pd.DataFrame({
 })
 
 predicted_cgpa = model.predict(new_student)[0]
-
 print("Predicted CGPA:", round(predicted_cgpa, 2))
+
 
 # Recommendation Logic
 if predicted_cgpa < 6.5:
