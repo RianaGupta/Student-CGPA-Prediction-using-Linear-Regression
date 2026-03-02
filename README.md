@@ -11,4 +11,4 @@ Data is created manually in code itself.
 ## Results
 Accuracy plot:
 
-![Accuracy](images/accuracy_plot.png)
+![Accuracy](images/Figure_1.png)
